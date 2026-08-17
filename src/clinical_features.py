@@ -32,7 +32,6 @@ def generate_clinical_features(image_df: pd.DataFrame, random_state: int = 42) -
 
     out = image_df.copy()
     out["age"] = age.round(1)
-    out["sex"] = sex
     out["smoker"] = smoker
     out["oxygen_saturation"] = oxygen_saturation.round(1)
     out["respiratory_rate"] = respiratory_rate.round(1)
