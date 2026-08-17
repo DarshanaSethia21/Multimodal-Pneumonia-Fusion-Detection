@@ -1,0 +1,26 @@
+# Virtual env
+.venv/
+
+# Data (large, redownloadable via kaggle CLI)
+data/raw/
+data/processed/
+*.npy
+*.zip
+
+# Kaggle credentials — NEVER commit this
+kaggle.json
+.kaggle/
+
+# Model artifacts
+results/metrics/*.csv
+results/figures/*.png
+*.pth
+*.pt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS/editor
+.DS_Store
+.vscode/

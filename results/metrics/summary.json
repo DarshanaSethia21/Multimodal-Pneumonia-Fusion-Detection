@@ -1,0 +1,8 @@
+{
+  "fusion_size_kb": 136.8837890625,
+  "fusion_inference_ms": 1.453920002677478,
+  "clinical_feature_columns": [
+    5216,
+    7
+  ]
+}
