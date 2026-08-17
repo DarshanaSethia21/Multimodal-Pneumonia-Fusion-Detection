@@ -23,13 +23,12 @@ def generate_clinical_features(image_df: pd.DataFrame, random_state: int = 42) -
     n = len(image_df)
     label = image_df["label"].to_numpy()
 
-    age = rng.normal(loc=45 + label * 8, scale=18).clip(0, 95)
-    sex = rng.integers(0, 2, size=n)
+    age = rng.normal(loc=45 + label * 8, scale=18)
     smoker = rng.binomial(1, p=0.15 + 0.10 * label)
-    oxygen_saturation = rng.normal(loc=97 - label * 4, scale=2).clip(70, 100)
-    respiratory_rate = rng.normal(loc=16 + label * 8, scale=3).clip(8, 45)
-    wbc_count = rng.normal(loc=7.5 + label * 4, scale=2).clip(2, 30)
-    fever_temp_c = rng.normal(loc=36.8 + label * 1.1, scale=0.5).clip(35, 41)
+    oxygen_saturation = rng.normal(loc=97 - label * 4, scale=2)
+    respiratory_rate = rng.normal(loc=16 + label * 8, scale=3)
+    wbc_count = rng.normal(loc=7.5 + label * 4, scale=2)
+    fever_temp_c = rng.normal(loc=36.8 + label * 1.1, scale=0.5)
 
     out = image_df.copy()
     out["age"] = age.round(1)
